@@ -12,4 +12,16 @@ You can deploy this website on the flip server inside the public_html directory.
 
 You need to include this URL in your PDF on the first page as well as on your discussion post.
 
-For a sample website using the BSG database, I would turn in the URL to an index.html page listing all the other pages in the website with a short description of what functionality is available in what page. 
+For a sample website using the BSG database, I would turn in the URL to an index.html page listing all the other pages in the website with a short description of what functionality is available in what page.
+
+### Pages Needed
+
+1. Content Feed
+2. User Profile
+3. Create a Post (maybe a modal)
+4. Individual Post (?)
+
+### Templates Needed
+
+1. Posts
+2. Comments

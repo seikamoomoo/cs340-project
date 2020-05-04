@@ -1,0 +1,25 @@
+{
+  "name": "cs340-project",
+  "version": "1.0.0",
+  "description": "CS 340 Project",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/seikamoomoo/cs340-project.git"
+  },
+  "author": "Seika Mahmud, John Zontos",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/seikamoomoo/cs340-project/issues"
+  },
+  "homepage": "https://github.com/seikamoomoo/cs340-project#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "handlebars": "^4.7.6",
+    "nodemon": "^2.0.3"
+  }
+}
