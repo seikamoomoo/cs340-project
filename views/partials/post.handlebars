@@ -1,0 +1,43 @@
+<div class="post" post-id="{{postID}}" user-id="{{userID}}">
+
+  <div class="post-header">
+    <a href="users/{{username}}"class="post-username">
+      {{username}}
+    </a>
+  </div>
+
+  <div class="post-contents">
+
+    <div class="post-media-container">
+      <img src="{{graphic}}" alt="{{title}}">
+    </div>
+
+    <div class="post-sound-container">
+      <audio controls>
+        <source src="{{sound}}">
+        Your browser does not support the audio element.
+      </audio>
+    </div>
+
+    <div class="post-info-container">
+      <a href="posts/{{@index}}" class="post-title">
+        {{title}}
+      </a>
+      <p class="post-description">
+        {{description}}
+      </p>
+    </div>
+
+    <div class="post-embed-container">
+      <a href="posts/{{embedPostID}}">
+        [embedded post preview]
+      </a>
+    </div>
+
+    <div class="post-info-container">
+      <div class="post-time">{{timeCreated}}</div>
+      <div class="post-tags">({{tags}})</div>
+    </div>
+
+  </div>
+</div>
