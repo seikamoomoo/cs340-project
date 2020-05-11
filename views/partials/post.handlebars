@@ -8,7 +8,7 @@
 
   <div class="post-contents">
 
-    <div class="post-media-container">
+    <div class="post-graphic-container">
       <img src="{{graphic}}" alt="{{title}}">
     </div>
 
@@ -19,7 +19,7 @@
       </audio>
     </div>
 
-    <div class="post-info-container">
+    <div class="post-content-container">
       <a href="posts/{{@index}}" class="post-title">
         {{title}}
       </a>
@@ -37,6 +37,16 @@
     <div class="post-info-container">
       <div class="post-time">{{timeCreated}}</div>
       <div class="post-tags">({{tags}})</div>
+    </div>
+
+    <div class="post-comments-container">
+
+      {{#each this}}
+        {{#if text}}
+          {{> comment}}
+        {{/if}}
+      {{/each}}
+
     </div>
 
   </div>

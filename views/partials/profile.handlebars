@@ -1,0 +1,12 @@
+<div class="profile" user-id="{{userID}}">
+
+</div>
+<section class="user-posts">
+
+    {{#each this}}
+      {{#if userID}}
+        {{> post}}
+      {{/if}}
+    {{/each}}
+
+</section>

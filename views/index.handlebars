@@ -1,0 +1,13 @@
+<main class="content">
+
+  <section id="posts">
+
+    {{#each this}}
+      {{#if description}}
+        {{> post}}
+      {{/if}}
+    {{/each}}
+
+  </section>
+
+</main>

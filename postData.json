@@ -1,0 +1,22 @@
+[
+  {
+    "postID": 1,
+    "userID": 2,
+    "title": "test",
+    "graphic": "https://cnet4.cbsistatic.com/img/xTXdUEQEBqoDx74pbwCcpUc1XFQ=/fit-in/370x0/2017/01/18/c68ae3ac-6795-4d38-91e9-ec3e4fbffd6c/9401078c315052fc72a74b.jpg",
+    "sound": "hi.mp3",
+    "description": "a description",
+    "embedPostID": 34,
+    "timeCreated": "8:14 PM on May 4 2020",
+    "tags": "#random #post #tags"
+  },
+  {
+    "postID": 2,
+    "userID": 1,
+    "title": "another post",
+    "graphic": "",
+    "sound": "music.mp3",
+    "description": "something something",
+    "timeCreated": "8:16 PM on May 4 2020",
+    "tags": "#random #post #tags #part2"
+  }
