@@ -39,14 +39,21 @@
       <div class="post-tags">({{tags}})</div>
     </div>
 
+    <div class="post-options-container">
+      <button type="button" class="post-edit-button action-button">Edit</button>
+      <button type="button" class="post-delete-button action-button">Delete</button>
+    </div>
+
     <div class="post-comments-container">
 
-      {{#each this}}
-        {{#if text}}
-          {{> comment}}
-        {{/if}}
-      {{/each}}
+      <div id="comments">
+          {{#each comments}}
+            {{> comment}}
+          {{/each}}
+      </div>
 
+      <input type="text" id="text-input" class="text-box">
+      <button id="send-button" class="action-button">Send</button>
     </div>
 
   </div>

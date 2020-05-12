@@ -1,9 +1,9 @@
 <div class="profile" user-id="{{userID}}">
-
+  <h2 class="profile-username">{{user.username}}</h2>
 </div>
 <section class="user-posts">
 
-    {{#each this}}
+    {{#each posts}}
       {{#if userID}}
         {{> post}}
       {{/if}}

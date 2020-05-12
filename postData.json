@@ -1,9 +1,9 @@
 [
   {
-    "postID": 1,
+    "postID": 0,
     "userID": 2,
     "title": "test",
-    "graphic": "https://cnet4.cbsistatic.com/img/xTXdUEQEBqoDx74pbwCcpUc1XFQ=/fit-in/370x0/2017/01/18/c68ae3ac-6795-4d38-91e9-ec3e4fbffd6c/9401078c315052fc72a74b.jpg",
+    "graphic": "https://www.naturschaetze-suedwestfalens.de/var/sauerland/storage/images/media/bilder/naturschaetze/buchfotos/05_p3_laubfrosch-mbd/507661-1-ger-DE/05_P3_Laubfrosch-MBD_front_large.jpg",
     "sound": "hi.mp3",
     "description": "a description",
     "embedPostID": 34,
@@ -11,7 +11,7 @@
     "tags": "#random #post #tags"
   },
   {
-    "postID": 2,
+    "postID": 1,
     "userID": 1,
     "title": "another post",
     "graphic": "",
@@ -20,3 +20,4 @@
     "timeCreated": "8:16 PM on May 4 2020",
     "tags": "#random #post #tags #part2"
   }
+]

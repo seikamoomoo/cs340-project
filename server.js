@@ -10,6 +10,10 @@ var port = process.env.PORT || 3000;
 app.engine('handlebars', exphbs({defaultLayout: 'main'}));
 app.set('view engine', 'handlebars');
 
+var postData = require('./postData');
+var userData = require('./userData');
+
+
 //socket.io setup
 //var server = require('http').Server(app);
 //var io = require('socket.io')(server);
@@ -26,7 +30,22 @@ app.use(bodyParser.json());
 app.use(express.static('public'));
 
 app.get('/', function (req, res, next) {
-  res.status(200).render('index', {});
+  res.status(200).render('index', {
+    posts: postData
+  });
+});
+
+app.get('/users/:userID', function (req, res, next) {
+  var userID = req.params.userID;
+  if(userData[userID]) {
+    res.status(200).render('profile', {
+      user: userData[userID],
+      posts: postData
+    });
+  }
+  else {
+    next();
+  }
 });
 
 app.get('*', function (req, res) {
