@@ -18,7 +18,11 @@
     <header>
       <h1 class="site-title"><a href="/">Orpheus</a></h1>
       <div class="topnav">
-        <a href="/login">Profile</a>
+        {{#if username}}
+          <a href="/users/{{username}}">{{username}}</a>
+        {{#else}}
+          <a href="/login">Login</a>
+        {{/if}}
         <input type="text" placeholder="Search...">
       </div>
     </header>
