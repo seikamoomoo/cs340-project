@@ -41,6 +41,10 @@ app.get('/login', function (req, res, next) {
   });
 });
 
+app.get('/create-profile', function (req, res, next) {
+  res.status(200).render('create-profile', {});
+});
+
 app.get('/users/:userID', function (req, res, next) {
   var userID = req.params.userID;
   if(userData[userID]) {

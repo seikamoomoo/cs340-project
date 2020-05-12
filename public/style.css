@@ -1,3 +1,22 @@
+header {
+   display: flex;
+   background-color: #604685;
+   height: 17vh;
+ }
+
+ body {
+   background-color: #fcfafb;
+   margin: 0;
+ }
+
+.site-title a {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 60px;
+  font-weight: bold;
+  color: #f6c439;
+  text-decoration: none;
+}
+
 .post {
   display: block;
   vertical-align: top;
