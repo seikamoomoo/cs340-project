@@ -10,7 +10,7 @@ CREATE TABLE `Posts` (
   `postID` int(11) NOT NULL AUTO_INCREMENT,
   `userID` int(11) NOT NULL,
   `timeCreated` datetime NOT NULL DEFAULT(sysdate()),
-  `sound` nvarchar(260),
+  `sound` nvarchar(260) NOT NULL,
   `graphic` nvarchar(260) NOT NULL,
   `tags` varchar(255),
   `embedPostID` int(11),
