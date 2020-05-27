@@ -48,7 +48,7 @@ CREATE TABLE `Posts_Feeds` (
   `feedID` int(11) NOT NULL,
   PRIMARY KEY (`postID`, `feedID`),
   FOREIGN KEY (`feedID`) REFERENCES `ContentFeeds`(`feedID`) ON UPDATE CASCADE ON DELETE CASCADE,
-  FOREIGN KEY (`postID`) REFERENCES Posts(`postID`) ON UPDATE CASCADE ON DELETE CASCADE
+  FOREIGN KEY (`postID`) REFERENCES `Posts`(`postID`) ON UPDATE CASCADE ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 INSERT INTO Users(username, password, email) VALUES
@@ -161,7 +161,7 @@ INSERT INTO Posts(userID, sound, graphic, title) VALUES
     (65,'https://www.computerhope.com/jargon/m/example.mp3','https://cdn.mos.cms.futurecdn.net/rqoDpnCCrdpGFHM6qky3rS-970-80.jpg','5. Everyday People - Sly and The Family Stone'),
     (47,'https://www.computerhope.com/jargon/m/example.mp3','https://cdn.mos.cms.futurecdn.net/rqoDpnCCrdpGFHM6qky3rS-970-80.jpg','6. Dizzy - Tommy Roe'),
     (43,'https://www.computerhope.com/jargon/m/example.mp3','https://cdn.mos.cms.futurecdn.net/rqoDpnCCrdpGFHM6qky3rS-970-80.jpg','7. Hot Fun In the Summertime - Sly and The Family Stone'),
-    (71,'https://www.computerhope.com/jargon/m/example.mp3','https://cdn.mos.cms.futurecdn.net/rqoDpnCCrdpGFHM6qky3rS-970-80.jpg','8. (It Looks Like) I''ll Never Fall In Love Again - Tom Jones');
+    (71,'https://www.computerhope.com/jargon/m/example.mp3','https://cdn.mos.cms.futurecdn.net/rqoDpnCCrdpGFHM6qky3rS-970-80.jpg','8. (It Looks Like) I''ll Never Fall In Love Again - Tom Jones'),
     (90,'https://www.computerhope.com/jargon/m/example.mp3','https://cdn.mos.cms.futurecdn.net/rqoDpnCCrdpGFHM6qky3rS-970-80.jpg','9. Build Me Up Buttercup - The Foundations'),
     (87,'https://www.computerhope.com/jargon/m/example.mp3','https://cdn.mos.cms.futurecdn.net/rqoDpnCCrdpGFHM6qky3rS-970-80.jpg','10. Crimson and Clover - Tommy James and The Shondells'),
     (71,'https://www.computerhope.com/jargon/m/example.mp3','https://cdn.mos.cms.futurecdn.net/rqoDpnCCrdpGFHM6qky3rS-970-80.jpg','11. One - Three Dog Night'),
