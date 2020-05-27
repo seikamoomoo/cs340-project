@@ -1,9 +1,15 @@
 <div class="post" post-id="{{postID}}" user-id="{{userID}}">
 
   <div class="post-header">
-    <a href="users/{{username}}"class="post-username">
+    <a href="users/{{username}}" class="post-username">
       {{username}}
     </a>
+
+    <span class="post-options-container">
+      <button type="button" class="post-edit-button action-button">Edit</button>
+      <button type="button" class="post-delete-button action-button">Delete</button>
+    </span>
+
   </div>
 
   <div class="post-contents">
@@ -34,14 +40,11 @@
       </a>
     </div>
 
+    <hr>
+
     <div class="post-info-container">
       <div class="post-time">{{timeCreated}}</div>
       <div class="post-tags">({{tags}})</div>
-    </div>
-
-    <div class="post-options-container">
-      <button type="button" class="post-edit-button action-button">Edit</button>
-      <button type="button" class="post-delete-button action-button">Delete</button>
     </div>
 
     <div class="post-comments-container">
@@ -52,8 +55,11 @@
           {{/each}}
       </div>
 
-      <input type="text" id="text-input" class="text-box">
-      <button id="send-button" class="action-button">Send</button>
+    </div>
+
+    <div class="send-comments-container">
+      <input type="text" id="text-input" class="text-box" placeholder="Leave a comment (be nice!)">
+      <button class="send-button action-button">Send</button>
     </div>
 
   </div>
