@@ -1,0 +1,15 @@
+<main class="content">
+
+  <button type="button" id="create-post-button">Create a Post</button>
+
+  <section id="posts">
+
+    {{#each posts}}
+      {{#if description}}
+        {{> post}}
+      {{/if}}
+    {{/each}}
+
+  </section>
+
+</main>

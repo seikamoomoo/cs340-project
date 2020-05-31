@@ -1,0 +1,66 @@
+<div class="post" post-id="{{postID}}" user-id="{{userID}}">
+
+  <div class="post-header">
+    <a href="users/{{username}}" class="post-username">
+      {{username}}
+    </a>
+
+    <span class="post-options-container">
+      <button type="button" class="post-edit-button action-button">Edit</button>
+      <button type="button" class="post-delete-button action-button">Delete</button>
+    </span>
+
+  </div>
+
+  <div class="post-contents">
+
+    <div class="post-graphic-container">
+      <img src="{{graphic}}" alt="{{title}}">
+    </div>
+
+    <div class="post-sound-container">
+      <audio controls>
+        <source src="{{sound}}">
+        Your browser does not support the audio element.
+      </audio>
+    </div>
+
+    <div class="post-content-container">
+      <a href="posts/{{@index}}" class="post-title">
+        {{title}}
+      </a>
+      <p class="post-description">
+        {{description}}
+      </p>
+    </div>
+
+    <div class="post-embed-container">
+      <a href="posts/{{embedPostID}}">
+        [embedded post preview]
+      </a>
+    </div>
+
+    <hr>
+
+    <div class="post-info-container">
+      <div class="post-time">{{timeCreated}}</div>
+      <div class="post-tags">({{tags}})</div>
+    </div>
+
+    <div class="post-comments-container">
+
+      <div id="comments">
+          {{#each comments}}
+            {{> comment}}
+          {{/each}}
+      </div>
+
+    </div>
+
+    <div class="send-comments-container">
+      <input type="text" id="text-input" class="text-box" placeholder="Leave a comment (be nice!)">
+      <button class="send-button action-button">Send</button>
+    </div>
+
+  </div>
+</div>
