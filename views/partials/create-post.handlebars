@@ -9,36 +9,32 @@
       <button type="button" id="modal-close" class="modal-hide-button">&times;</button>
     </div>
 
+    <!-- <hr id="create-hr"> -->
+
     <div class="modal-body">
 
-      <div class="post-input-element">
-        <label for="post-title-input">Title</label>
-        <input type="text" id="post-title-input"></input>
+      <div class="post-input-element" id="title-element">
+        <input type="text" id="post-title-input" placeholder="Title" required></input>
       </div>
 
       <div class="post-input-element">
-        <label for="post-graphic-input">Graphic</label>
-        <input type="text" id="post-graphic-input">
+        <input type="text" id="post-graphic-input" placeholder="graphic" required>
       </div>
 
       <div class="post-input-element">
-        <label for="post-sound-input">Sound</label>
-        <input type="text" id="post-sound-input">
+        <input type="text" id="post-sound-input" placeholder="sound" required>
+      </div>
+
+      <div class="post-input-element" id="description-element">
+        <textarea id="post-description-input" placeholder="description"></textarea>
       </div>
 
       <div class="post-input-element">
-        <label for="post-description-input">Description</label>
-        <input type="text" id="post-description-input">
+        <input type="text" id="post-embed-input" placeholder="embed URL">
       </div>
 
       <div class="post-input-element">
-        <label for="post-embed-input">Embedded Post</label>
-        <input type="text" id="post-embed-input">
-      </div>
-
-      <div class="post-input-element">
-        <label for="post-tags-input">Tags</label>
-        <input type="text" id="post-tags-input">
+        <input type="text" id="post-tags-input" placeholder="tags">
       </div>
 
     </div>
