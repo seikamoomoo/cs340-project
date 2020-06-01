@@ -1,44 +1,39 @@
+// direct to public
 var path = require('path');
+
+var mysql = require('./dbcon.js');
 
 //express setup
 var express = require('express');
 var app = express();
-var exphbs = require('express-handlebars');
 
-var port = process.env.PORT || 3000;
+// handlebars setup
+var handlebars = require('express-handlebars').create({ defaultLayout: 'main' });
+app.engine('handlebars', handlebars.engine);app.set('view engine', 'handlebars');
 
-app.engine('handlebars', exphbs({defaultLayout: 'main'}));
-app.set('view engine', 'handlebars');
+app.set('port', process.argv[2]);
 
-var postData = require('./postData');
-var userData = require('./userData');
-
-
-//socket.io setup
-//var server = require('http').Server(app);
-//var io = require('socket.io')(server);
-
-//bodyParser setup
+// bodyParser setup
 var bodyParser = require('body-parser');
+app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 
-//favicon.icon
-//var favicon = require('serve-favicon');
-//app.use(favicon(__dirname + '/public/favicon.ico'));
+// app.use('/users', require('./users.js'));
+// app.use('/posts', require('./posts.js'));
 
-//==Handle incoming requests
+// favicon.icon
+// var favicon = require('serve-favicon');
+// app.use(favicon(__dirname + '/public/favicon.ico'));
+
+// Handle incoming requests
 app.use(express.static('public'));
 
 app.get('/', function (req, res, next) {
-  res.status(200).render('index', {
-    posts: postData
-  });
+  res.status(200).render('index', {});
 });
 
 app.get('/login', function (req, res, next) {
-  res.status(200).render('login', {
-    users: userData
-  });
+  res.status(200).render('login', {});
 });
 
 app.get('/create-profile', function (req, res, next) {
@@ -48,10 +43,7 @@ app.get('/create-profile', function (req, res, next) {
 app.get('/users/:userID', function (req, res, next) {
   var userID = req.params.userID;
   if(userData[userID]) {
-    res.status(200).render('profile', {
-      user: userData[userID],
-      posts: postData
-    });
+    res.status(200).render('profile', {});
   }
   else {
     next();
@@ -62,9 +54,9 @@ app.get('*', function (req, res) {
   res.status(404).render('404', {});
 });
 
-app.listen(port, function (err) {
+app.listen(app.get('port'), function (err) {
   if (err) {
     throw err;
   }
-  console.log("== Server is listening on port", port);
+  console.log("== Server is listening on port", app.get('port'));
 });
