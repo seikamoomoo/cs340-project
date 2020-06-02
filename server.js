@@ -30,7 +30,9 @@ app.use(bodyParser.json());
 app.use(express.static('public'));
 
 app.get('/', function (req, res, next) {
-  res.status(200).render('index', {});
+  res.status(200).render('index', {
+    posts: require('./postData')
+  });
 });
 
 app.get('/login', function (req, res, next) {
